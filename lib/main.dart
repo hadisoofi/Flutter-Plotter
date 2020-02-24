@@ -39,9 +39,19 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: SinPlotter(_frequency),
-      ),
+      body: 
+         Column(
+           crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            SinPlotter(_frequency),
+            FlatButton(onPressed: () {
+              setState(() {
+                _frequency = 1;
+              });
+            }, child: Text('Reset')),
+          ],
+        ),
+      
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementFrequency,
         tooltip: 'Increment',

@@ -94,22 +94,7 @@ class FunctionPainter extends CustomPainter {
           canvas,
           Offset(
               currentPoint.dx - tp.width - 5, currentPoint.dy - tp.height / 2));
-    });
-
-    // plot the x label
-    // span = new TextSpan(
-    //     style: new TextStyle(
-    //         color: Colors.black, fontSize: 16, fontWeight: FontWeight.w700),
-    //     text: 'LabelX');
-    // tp = new TextPainter(
-    //     text: span,
-    //     textAlign: TextAlign.center,
-    //     textDirection: TextDirection.ltr);
-    // tp.layout();
-    // tp.paint(
-    //     canvas,
-    //     new Offset(
-    //         size.width / 2 - tp.width / 2, currentPoint.dy + 3 * tp.height));
+    });   
 
     // plot the function
     List<double> screenX = rectAdaptor.mapXToScreen(x);
